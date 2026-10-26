@@ -1,0 +1,149 @@
+
+/* ===== General page styling ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #10131a;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Main chatbot container ===== */
+.chat-container {
+  width: 90%;
+  max-width: 600px;
+  height: 80vh;
+  background: #1a1f2b;
+  border: 1px solid #343b4b;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ===== Chat header ===== */
+.chat-header {
+  padding: 20px;
+  background: #222938;
+  border-bottom: 1px solid #343b4b;
+}
+
+.chat-header h1 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.chat-header p {
+  margin: 0;
+  color: #aab4c6;
+  font-size: 14px;
+}
+
+/* ===== Messages area ===== */
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Individual message bubbles ===== */
+.message {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  max-width: 80%;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* AI messages */
+.bot-message {
+  background: #303849;
+  align-self: flex-start;
+}
+
+/* User messages */
+.user-message {
+  background: #536df5;
+  align-self: flex-end;
+}
+
+/* ===== Input area ===== */
+.chat-input {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  border-top: 1px solid #343b4b;
+}
+
+.chat-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #454e61;
+  background: #10131a;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.chat-input input:focus {
+  border-color: #536df5;
+}
+
+/* ===== Send button ===== */
+.chat-input button {
+  padding: 12px 18px;
+  background: #536df5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.chat-input button:hover {
+  background: #4058d9;
+}
+
+/* ===== Mobile responsiveness ===== */
+@media (max-width: 600px) {
+  body {
+    align-items: stretch;
+  }
+
+  .chat-container {
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    height: 100dvh;
+    border-radius: 0;
+    border: none;
+  }
+
+  .chat-messages {
+    padding: 14px;
+  }
+
+  .message {
+    max-width: 88%;
+  }
+
+  .chat-input {
+    padding: 12px;
+  }
+
+  .chat-input button {
+    padding: 12px 15px;
+  }
+}
